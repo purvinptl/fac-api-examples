@@ -30,7 +30,7 @@ def request_file_access(report_id):
         'Authorization': f'Bearer {ACCESS_TOKEN}'
     }
     payload = json.dumps({
-        "p_report_id": f'{report_id}'
+        "report_id": f'{report_id}'
         })
     
     response = requests.request("POST", url, headers=headers, data=payload)
