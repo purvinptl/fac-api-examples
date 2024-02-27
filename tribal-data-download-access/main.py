@@ -44,9 +44,6 @@ def download_file(access_info):
     access_uuid_value = access_info.get('access_uuid')
     url = f'{FAC_PDF_BASE}/dissemination/report/pdf/ota/{access_uuid_value}'
     payload = {}
-    headers = {
-        'X-Api-Key': f'{FAC_API_KEY}'
-    }
     try:
         response = requests.get(url, headers=headers, data=payload)
         if response.status_code == 200:
